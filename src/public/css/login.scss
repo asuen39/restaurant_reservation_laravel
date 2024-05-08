@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.header__openbtn {
+    position: relative;
+    /*ボタン内側の基点となるためrelativeを指定*/
+    background: #57a2c7;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.header__openbtn span:nth-of-type(1) {
+    top: 15px;
+}
+
+.header__openbtn span:nth-of-type(2) {
+    top: 23px;
+}
+
+.header__openbtn span:nth-of-type(3) {
+    top: 31px;
+}

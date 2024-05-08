@@ -1,0 +1,143 @@
+.detail__content {
+    width: auto;
+}
+
+.detail__inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 40px 0 30px;
+}
+
+.detail__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.detail__list-box {
+    width: 50%;
+}
+
+.detail__name-area {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.detail__name-arrow-block {
+    width: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.detail__name {
+    margin-left: 10px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.detail__name-arrow {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+}
+
+.detail__name-arrow::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: solid 2px #000000;
+    border-right: solid 2px #000000;
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+
+.arrow-left {
+    transform: rotate(-135deg);
+}
+
+.shop_image-thumbnail {
+    width: 200px;
+}
+
+.case__name {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.case__name-small {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.detail__text {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.detail__reservation {
+    width: 100%;
+    background-color: #4169e1;
+}
+
+.detail__reservation-title {
+    color: #ffffff;
+    padding: 25px 25px 17px;
+}
+
+.datepicker {
+    width: 200px;
+    height: 40px;
+    position: relative;
+    top: 0 !important;
+    margin-left: 25px;
+}
+
+.detail__reservation-list {
+    padding: 0 25px;
+    margin-top: 25px;
+}
+
+.datepicker-input {
+    width: 200px;
+    height: 100%;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+}
+
+.datepicker-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.detail__reservation-form {
+    padding: 20px;
+    margin: 25px;
+    background-color: #6495ed;
+}
+
+.detail__reservation-form-ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    color: #ffffff;
+}
+
+.detail__reservation-submit {
+    background-color: #0000ff;
+    text-align: center;
+    padding: 25px;
+}
+
+.detail__reservation-submit-text {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+}

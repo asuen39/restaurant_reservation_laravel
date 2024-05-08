@@ -1,0 +1,17 @@
+.mypage__content {
+    width: auto;
+}
+
+.mypage__name {
+    width: 60%;
+    height: auto;
+    text-align: right;
+}
+
+.mypage__section {
+    display: flex;
+}
+
+.section__block {
+    width: 50%;
+}

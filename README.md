@@ -1,1 +1,1 @@
-# laravel-docekr-template
+# 飲食店予約サービス
