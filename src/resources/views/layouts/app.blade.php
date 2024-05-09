@@ -7,9 +7,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>飲食店予約サービスアプリケーション</title>
     <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/common.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker3.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/common.css') }}">
     @yield('css')
 </head>
 

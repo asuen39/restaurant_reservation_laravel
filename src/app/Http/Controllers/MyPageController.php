@@ -19,7 +19,13 @@ class MyPageController extends Controller
         // ログイン中のユーザーのIDを取得
         $userId = Auth::id();
 
-        return view('mypage');
+        //　ログインユーザーの予約情報取得
+        $reservations = Reservation::where('user_id', $userId)->get();
+
+        // お気に入りの店舗情報を取得
+        $favorites = Favorite::where('user_id', $userId)->get();
+
+        return view('mypage', compact('reservations', 'favorites'));
     }
 
     public function updateProfile()

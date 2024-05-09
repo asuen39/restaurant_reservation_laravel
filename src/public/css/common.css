@@ -141,3 +141,12 @@ body.active {
 .table-condensed {
     background-color: #ffffff;
 }
+
+/* アイコン類 */
+.clock__icon {
+    width: 30px;
+}
+
+.close__icon {
+    width: 25px;
+}

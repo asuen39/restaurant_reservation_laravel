@@ -103,6 +103,22 @@
     margin-top: 25px;
 }
 
+.detail__label {
+    width: 100%;
+    position: relative;
+}
+
+.detail__label::before {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 8.5px solid #d3d3d3;
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 0;
+}
+
 .datepicker-input {
     width: 200px;
     height: 100%;

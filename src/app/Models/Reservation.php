@@ -32,8 +32,8 @@ class Reservation extends Model
     }
 
     /*リレーションシップ - Shopモデル */
-    public function shops()
+    public function shop()
     {
-        return $this->belongsTo(Shops::class);
+        return $this->belongsTo(Shops::class, 'shop_id');
     }
 }

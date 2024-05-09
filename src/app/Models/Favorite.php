@@ -23,9 +23,9 @@ class Favorite extends Model
         return $this->belongsTo(User::class);
     }
 
-    /*リレーションシップ - Shopsモデル */
-    public function shops()
+    /*リレーションシップ - Shopモデル */
+    public function shop()
     {
-        return $this->belongsTo(Shops::class);
+        return $this->belongsTo(Shops::class, 'shop_id');
     }
 }

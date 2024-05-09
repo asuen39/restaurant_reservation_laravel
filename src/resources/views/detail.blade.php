@@ -32,10 +32,16 @@
                         <span class="datepicker-icon"><i class="fa-regular fa-calendar fa-fw"></i></span>
                     </div>
                     <div class="detail__reservation-list">
-                        <input type="text" class="form-control" id="reservation_time" placeholder="17:00">
+                        <label class="detail__label">
+                            <select class="form-control" id="reservation_time" name="reservation_time">
+                            </select>
+                        </label>
                     </div>
                     <div class="detail__reservation-list">
-                        <input type="text" class="form-control" id="reservation_number" placeholder="2">
+                        <label class="detail__label">
+                            <select class="form-control" id="reservation_number" name="reservation_number">
+                            </select>
+                        </label>
                     </div>
                     <form class="" action="{{ route('makeReservation') }}" method="post">
                         <div class="detail__reservation-form">

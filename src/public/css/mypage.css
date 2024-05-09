@@ -3,15 +3,145 @@
 }
 
 .mypage__name {
-    width: 60%;
+    width: 61.5%;
     height: auto;
+    margin-bottom: 50px;
     text-align: right;
 }
 
 .mypage__section {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .section__block {
-    width: 50%;
+    width: 48%;
+    height: auto;
+}
+
+.mypage__reservation-content {
+    display: block;
+    width: 100%;
+    padding: 20px 25px;
+    margin: 30px auto;
+    border: 1px solid #4169e1;
+    border-radius: 10px;
+    background-color: #4169e1;
+}
+
+.mypage__reservation-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mypage__reservation-head-left {
+    margin: 0;
+}
+
+.mypage__reservation-head-left-text {
+    margin-left: 20px;
+    color: #ffffff;
+}
+
+.mypage__reservation-area {
+    padding: 0;
+    margin: 0;
+}
+
+.mypage__reservation-list {
+    display: table;
+    width: 100%;
+    padding-top: 10px;
+    color: #ffffff;
+}
+
+.mypage__reservation-list-text {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.mypage__reservation-list-text.left {
+    width: 25%;
+}
+
+.mypage__favorite-shop-area {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.mypage__favorite-shop-list {
+    width: 48%;
+    margin-bottom: 40px;
+}
+
+.mypage__favorite-content {
+    display: block;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+}
+
+.mypage__favorite-shop-image {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.mypage_shop-image-thumbnail {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.mypage__favorite-shop-title {
+    padding: 0 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.mypage__favorite-case-name {
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+.mypage__case-name-small {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.mypage__shop-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 15px;
+}
+
+.mypage__shop-fotter-button {
+    width: 60%;
+    text-align: center;
+}
+
+.mypage__shop-button-text {
+    display: block;
+    width: 100%;
+    padding: 8px 0px;
+    background-color: #4169e1;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.mypage__shop-favorite {
+    width: 40%;
+    text-align: right;
+}
+
+.mypage__shop-favorite-red {
+    color: #ff0000;
 }
