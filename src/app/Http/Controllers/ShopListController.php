@@ -7,8 +7,8 @@ use App\Models\User;
 use App\Models\Shops;
 use App\Models\Genres;
 use App\Models\Countrys;
-use App\Models\Reservation;
-use App\Models\Favorite;
+use App\Models\Reservations;
+use App\Models\Favorites;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
@@ -39,7 +39,7 @@ class ShopListController extends Controller
         $shops = Shops::with('belongsToCountry', 'belongsToGenres')->get();
 
         // ユーザーIDごとにデータベースからお気に入り情報を取得
-        $favoriteShops = Favorite::where('user_id', auth()->user()->id)->pluck('shop_id')->toArray();
+        $favoriteShops = Favorites::where('user_id', auth()->user()->id)->pluck('shop_id')->toArray();
 
         return view('index', compact('shops', 'favoriteShops'))->with('countrys', $this->countrys)->with('genres', $this->genres);
     }
@@ -51,7 +51,7 @@ class ShopListController extends Controller
         $shopId = $request->get('shop_id');
 
         // すでにお気に入りに追加されているかどうかを確認
-        $existingFavorite = Favorite::where('user_id', auth()->user()->id)
+        $existingFavorite = Favorites::where('user_id', auth()->user()->id)
             ->where('shop_id', $shopId)
             ->first();
 
@@ -60,7 +60,7 @@ class ShopListController extends Controller
             $existingFavorite->delete();
         } else {
             // お気に入りに追加されていない場合は追加
-            Favorite::create([
+            Favorites::create([
                 'user_id' => auth()->user()->id,
                 'shop_id' => $shopId,
             ]);
@@ -101,7 +101,7 @@ class ShopListController extends Controller
         $searchResults = $query->paginate(10);
 
         // ユーザーIDごとにデータベースからお気に入り情報を取得
-        $favoriteShops = Favorite::where('user_id', auth()->user()->id)->pluck('shop_id')->toArray();
+        $favoriteShops = Favorites::where('user_id', auth()->user()->id)->pluck('shop_id')->toArray();
 
         return view('index', compact('searchResults', 'favoriteShops'))->with('countrys', $this->countrys)->with('genres', $this->genres);
     }

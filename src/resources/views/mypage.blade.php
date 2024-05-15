@@ -7,12 +7,15 @@
 @section('content')
 <div class="mypage__content">
     <section class="mypage__section">
-        <div class="mypage__name">
-            <h2>{{ Auth::user()->name }}さん</h2>
+        <div class="section__block-left sp_margin0"></div>
+        <div class="section__block-right">
+            <div class="mypage__name">
+                <h2>{{ Auth::user()->name }}さん</h2>
+            </div>
         </div>
     </section>
     <section class="mypage__section">
-        <div class="section__block">
+        <div class="section__block-left">
             <h4>予約状況</h4>
             @php $count = 1; @endphp <!-- カウント変数を初期化 -->
             @foreach($reservations as $reservation)
@@ -47,7 +50,7 @@
             </div>
             @endforeach
         </div>
-        <div class="section__block">
+        <div class="section__block-right">
             <h4>お気に入り店舗</h4>
             <ul class="mypage__favorite-shop-area">
                 @foreach($favorites as $favorite)

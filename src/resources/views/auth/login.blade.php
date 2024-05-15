@@ -35,6 +35,9 @@
             @error('password')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
+            @if($errors->has('login_error'))
+            <div class="alert alert-danger">{{ $errors->first('login_error') }}</div>
+            @endif
             <div class="form__button">
                 <button class="form__button-submit" type="submit">ログイン</button>
             </div>

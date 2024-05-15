@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReservationTable extends Migration
+class CreateReviewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,16 @@ class CreateReservationTable extends Migration
      */
     public function up()
     {
-        Schema::create('reservation', function (Blueprint $table) {
+        Schema::create('reviews', function (Blueprint $table) {
             $table->bigIncrements('id');
             /*カラム名:user_id, 型:bigint unsigned, NOT NULL:〇, FOREIGN KEY:userd(id) */
             $table->unsignedBigInteger('user_id')->nullable(false);
             $table->foreign('user_id')->references('id')->on('users');
-            /*カラム名:shop_id, 型:bigint unsigned, NOT NULL:〇, FOREIGN KEY:shop(id) */
-            $table->unsignedBigInteger('shop_id')->nullable(false);
-            $table->foreign('shop_id')->references('id')->on('shops');
-            $table->date('reservation_date')->nullable(false);
-            $table->time('reservation_time')->nullable(false);
-            $table->unsignedBigInteger('party_size')->nullable(false);
+            /*カラム名:reservation_id, 型:bigint unsigned, NOT NULL:〇, FOREIGN KEY:reservations(id) */
+            $table->unsignedBigInteger('reservation_id')->nullable(false);
+            $table->foreign('reservation_id')->references('id')->on('reservations');
+            $table->unsignedBigInteger('rating')->nullable(false);
+            $table->text('comment')->nullable(false);
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
         });
@@ -36,6 +35,6 @@ class CreateReservationTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reservation');
+        Schema::dropIfExists('reviews');
     }
 }

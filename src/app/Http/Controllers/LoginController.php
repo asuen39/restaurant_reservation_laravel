@@ -3,11 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
-use App\Actions\Fortify\CreateNewUser;
-use Laravel\Fortify\Contracts\CreatesNewUsers;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\LoginRequest;
 
 class LoginController extends Controller
 {
@@ -18,16 +15,19 @@ class LoginController extends Controller
     }
 
     /* ログイン処理 */
-    public function postLogin(Request $request)
+    public function postLogin(LoginRequest $request)
     {
-        if (Auth::attempt($request->only('email', 'password'), $request->filled('remember'))) {
+        // バリデーションは RegisterRequest で自動的に実行される。
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials, $request->filled('remember'))) {
             // ログイン成功時のリダイレクト先を指定
-            return redirect()->to('/');
+            return redirect()->intended('/');
         }
 
         // ログインに失敗した場合は、エラーメッセージを追加してログイン画面にリダイレクト
-        return back()->withErrors([
-            'email' => 'ログイン出来ませんでした。',
+        return back()->withInput()->withErrors([
+            'login_error' => 'メールアドレスまたはパスワードが正しくありません。',
         ]);
     }
 

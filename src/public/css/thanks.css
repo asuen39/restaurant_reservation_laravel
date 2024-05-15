@@ -18,20 +18,35 @@
 
 .thanks__text {
     font-size: 22px;
+    font-weight: 700;
     text-align: center;
     margin: 20px auto;
 }
 
 .thanks__login {
-    width: 160px;
+    width: auto;
     text-align: center;
     margin: 20px auto;
 }
 
 .thanks__login-text {
     display: block;
-    padding: 10px 0px;
+    padding: 8px 20px;
     background-color: #4169e1;
     border-radius: 10px;
     color: #ffffff;
+}
+
+/* 768px以下 */
+@media screen and (max-width:768px) {
+    .thanks__text {
+        font-size: 20px;
+    }
+}
+
+/* 480px以下 */
+@media screen and (max-width:480px) {
+    .thanks__text {
+        font-size: 16px;
+    }
 }

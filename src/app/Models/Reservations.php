@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Reservation extends Model
+class Reservations extends Model
 {
     use HasFactory;
 
     /*モデルのデフォルトのテーブル名 */
-    protected $table = 'reservation';
+    protected $table = 'reservations';
 
     // テーブルの主キー
     protected $primaryKey = 'id';
@@ -35,5 +35,10 @@ class Reservation extends Model
     public function shop()
     {
         return $this->belongsTo(Shops::class, 'shop_id');
+    }
+
+    public function review()
+    {
+        return $this->hasMany(Reviews::class);
     }
 }

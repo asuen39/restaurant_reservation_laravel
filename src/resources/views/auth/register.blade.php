@@ -21,6 +21,9 @@
                     </div>
                 </div>
             </div>
+            @error('name')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
             <div class="form__group">
                 <div class="form__group-content">
                     <div class="form__input--text">

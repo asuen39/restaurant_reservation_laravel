@@ -21,12 +21,12 @@ use App\Http\Controllers\MyPageController;
 */
 
 Route::get('/register', [RegisteredUserController::class, 'register'])->name('register');
-Route::post('/register', [RegisteredUserController::class, 'store']);
+Route::post('/register', [RegisteredUserController::class, 'create']);
 
 Route::get('/thanks', [ThanksController::class, 'thanks'])->name('thanks');
 
 Route::get('/login', [LoginController::class, 'login'])->name('login');
-Route::post('/login', [LoginController::class, 'postLogin']);
+Route::post('/login', [LoginController::class, 'postLogin'])->name('postLogin');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/', [ShopListController::class, 'index'])->name('index');

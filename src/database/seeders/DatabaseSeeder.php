@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(CountrysTableSeeder::class);
         $this->call(GenresTableSeeder::class);
         $this->call(ShopsTableSeeder::class);
-        $this->call(FavoriteTableSeeder::class);
-        $this->call(ReservationTableSeeder::class);
+        $this->call(FavoritesTableSeeder::class);
+        $this->call(ReservationsTableSeeder::class);
     }
 }

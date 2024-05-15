@@ -66,3 +66,16 @@
   text-align: center;
   padding: 10px 0;
 }
+
+/* 768px以下 */
+@media screen and (max-width:768px) {
+  .register__header-title {
+    padding: 10px;
+  }
+
+  .form__button {
+    max-width: initial;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

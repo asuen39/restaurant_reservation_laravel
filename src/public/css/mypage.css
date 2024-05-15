@@ -3,10 +3,8 @@
 }
 
 .mypage__name {
-    width: 61.5%;
     height: auto;
     margin-bottom: 50px;
-    text-align: right;
 }
 
 .mypage__section {
@@ -15,16 +13,22 @@
     justify-content: space-between;
 }
 
-.section__block {
-    width: 48%;
+.section__block-left {
+    width: 40%;
+    height: auto;
+}
+
+.section__block-right {
+    width: 55%;
     height: auto;
 }
 
 .mypage__reservation-content {
     display: block;
+    max-width: 400px;
     width: 100%;
     padding: 20px 25px;
-    margin: 30px auto;
+    margin-top: 30px;
     border: 1px solid #4169e1;
     border-radius: 10px;
     background-color: #4169e1;
@@ -70,12 +74,11 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0;
     margin-top: 30px;
 }
 
 .mypage__favorite-shop-list {
-    width: 48%;
+    width: 45%;
     margin-bottom: 40px;
 }
 
@@ -144,4 +147,44 @@
 
 .mypage__shop-favorite-red {
     color: #ff0000;
+}
+
+/* 1200px以下 */
+@media screen and (max-width:1200px) {
+    .mypage__reservation-content {
+        max-width: 350px;
+    }
+
+    .mypage__favorite-shop-list {
+        width: 47%;
+    }
+}
+
+/* 768px以下 */
+@media screen and (max-width:768px) {
+
+    .section__block-left {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .section__block-right {
+        width: 100%;
+    }
+
+    .sp_margin0 {
+        margin-bottom: 0;
+    }
+
+    .mypage__reservation-content {
+        max-width: 500px;
+        margin: 30px auto 0;
+    }
+}
+
+/* 480px以下 */
+@media screen and (max-width:480px) {
+    .mypage__favorite-shop-list {
+        width: 100%;
+    }
 }

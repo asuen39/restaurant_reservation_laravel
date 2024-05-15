@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Shops;
 use App\Models\Genres;
 use App\Models\Countrys;
-use App\Models\Reservation;
+use App\Models\Reservations;
+use App\Http\Requests\UserFormRequest;
 
 class ShopDetailController extends Controller
 {
@@ -26,7 +27,7 @@ class ShopDetailController extends Controller
         return view('detail')->with('shops', $shops, 'id', $id);
     }
 
-    public function makeReservation(Request $request)
+    public function makeReservation(UserFormRequest $request)
     {
         // フォームから送信されたデータを取得
         $shop_id = $request->input('shop_id');
@@ -35,7 +36,7 @@ class ShopDetailController extends Controller
         $reservation_number = $request->input('reservation_number');
 
         // モデルを使用してデータベースに保存
-        Reservation::create([
+        Reservations::create([
             'user_id' => auth()->user()->id,
             'shop_id' => $shop_id,
             'reservation_date' => $reservation_date,

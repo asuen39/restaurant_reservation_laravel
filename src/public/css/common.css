@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/* 全体 */
 html,
 body,
 main {
@@ -10,24 +11,41 @@ main {
 
 body {
     background-color: #efefef;
+    font-family: "Helvetica Neue",
+        Arial,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        Meiryo,
+        sans-serif;
 }
 
 body.active {
     overflow: hidden;
 }
 
-.container {
+.container-lg {
     width: 100%;
     height: 100%;
     position: relative;
 }
 
+/* 共通 */
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+}
+
+/* ヘッダー */
 .header {
     height: 100px;
 }
 
 .header__inner {
     height: 100px;
+    position: relative;
 }
 
 .header__inner.active {
@@ -38,17 +56,18 @@ body.active {
     position: relative;
     /*ボタン内側の基点となるためrelativeを指定*/
     top: 25px;
-    left: 50px;
+    left: 0;
     background: #4169e1;
     cursor: pointer;
     width: 50px;
     height: 50px;
     border-radius: 5px;
     box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.5);
+    z-index: 2;
 }
 
 /*ボタン内側*/
-.header__openbtn span {
+.header__openbtn-border {
     display: inline-block;
     transition: all .4s;
     /*アニメーションの設定*/
@@ -59,17 +78,17 @@ body.active {
     background: #fff;
 }
 
-.header__openbtn span:nth-of-type(1) {
+.header__openbtn-border:nth-of-type(1) {
     top: 15px;
     width: 45%;
 }
 
-.header__openbtn span:nth-of-type(2) {
+.header__openbtn-border:nth-of-type(2) {
     top: 23px;
     width: 20%;
 }
 
-.header__openbtn span:nth-of-type(3) {
+.header__openbtn-border:nth-of-type(3) {
     top: 31px;
     width: 35%;
 }
@@ -97,7 +116,7 @@ body.active {
 .header__title {
     position: absolute;
     top: 35px;
-    left: 115px;
+    left: 80px;
     font-size: 30px;
     font-weight: bold;
     color: #4169e1;
@@ -105,13 +124,13 @@ body.active {
 
 .nav_global {
     position: fixed;
-    top: 100px;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 999;
     background-color: rgba(255, 255, 255);
-    padding-top: 50px;
+    padding-top: 150px;
+    z-index: 1;
 }
 
 .nav_global.is_close {
@@ -127,6 +146,7 @@ body.active {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 0;
 }
 
 .header__nav-item {
@@ -135,11 +155,9 @@ body.active {
 
 .header__nav__button {
     font-size: 30px;
+    font-weight: bold;
     color: #0000ff;
-}
-
-.table-condensed {
-    background-color: #ffffff;
+    text-decoration: none;
 }
 
 /* アイコン類 */
@@ -149,4 +167,17 @@ body.active {
 
 .close__icon {
     width: 25px;
+}
+
+/* datepicker */
+
+.table-condensed {
+    background-color: #ffffff;
+}
+
+/* 768px以下 */
+@media screen and (max-width:768px) {
+    .nav_global {
+        padding-top: 120px;
+    }
 }
