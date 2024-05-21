@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker3.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/common.css') }}">
     @yield('css')
+    @livewireStyles
 </head>
 
 <body>
@@ -63,6 +64,7 @@
     <script type="text/javascript" src="{{ asset('js/header.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/detail.js') }}"></script>
     @yield('scripts')
+    @livewireScripts
 </body>
 
 </html>

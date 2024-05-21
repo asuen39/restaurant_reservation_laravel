@@ -26,7 +26,15 @@
                         <img src="{{ asset('images/clock_icon.png') }}" class="clock__icon" alt="clock">
                         <span class="mypage__reservation-head-left-text">予約{{ $count }}</span>
                     </p>
-                    <img src="{{ asset('images/close_icon.png') }}" class="close__icon" alt="close">
+                    <div class="mypage__reservation-head-right">
+                        <form action="{{ route('deleteReservation', $reservation->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" style="background:none; border:none;">
+                                <img src="{{ asset('images/close_icon.png') }}" class="close__icon" alt="close">
+                            </button>
+                        </form>
+                    </div>
                 </div>
                 <ul class="mypage__reservation-area">
                     <li class="mypage__reservation-list">
@@ -46,6 +54,12 @@
                         <p class="mypage__reservation-list-text">{{ $reservation->party_size }}人</p>
                     </li>
                 </ul>
+                <div class="mypage__reservation-content-edit">
+                    @livewire('modal', ['reservation' => $reservation], key($reservation->id))
+                </div>
+                <div class="mypage__reservation-content-reviews">
+                    @livewire('reviews-modal', ['reservation' => $reservation], key($reservation->id))
+                </div>
                 @php $count++; @endphp
             </div>
             @endforeach
@@ -75,7 +89,6 @@
                 @endforeach
             </ul>
         </div>
-</div>
-</section>
+    </section>
 </div>
 @endsection

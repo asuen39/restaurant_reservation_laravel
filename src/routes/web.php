@@ -39,3 +39,6 @@ Route::post('/detail', [ShopDetailController::class, 'makeReservation'])->name('
 Route::get('/done', [DoneController::class, 'done'])->name('done');
 
 Route::get('/mypage', [MyPageController::class, 'mypage'])->name('mypage');
+Route::post('/updateProfile', [MyPageController::class, 'updateProfile'])->name('updateProfile');
+Route::delete('/deleteReservation/{reservation}', [MyPageController::class, 'deleteReservation'])->name('deleteReservation');
+Route::post('/submitReview', [MyPageController::class, 'submitReview'])->name('submitReview');

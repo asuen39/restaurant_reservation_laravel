@@ -25,6 +25,7 @@
 
 .mypage__reservation-content {
     display: block;
+    position: relative;
     max-width: 400px;
     width: 100%;
     padding: 20px 25px;
@@ -32,6 +33,232 @@
     border: 1px solid #4169e1;
     border-radius: 10px;
     background-color: #4169e1;
+}
+
+.mypage__reservation-content-edit {
+    position: absolute;
+    right: 25px;
+    top: 75px;
+}
+
+.mypage__reservation-content-reviews {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+}
+
+.mypage__reservation-edit-button {
+    padding: 6px 10px;
+    border: 1px solid #ffa500;
+    background-color: #ffa500;
+    border-radius: 6px;
+}
+
+.mypage__modal-edit {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+}
+
+.mypage__modal-edit::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.modal-body {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 500px;
+    width: 90%;
+}
+
+.reviews__modal-body {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    max-width: 700px;
+}
+
+.modal-content {
+    background: #fff;
+    border: 2px solid #000;
+    text-align: left;
+    padding: 30px;
+    font-weight: bold;
+}
+
+.datepicker {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    top: 0 !important;
+}
+
+.datepicker-input {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #708090;
+    background-color: #e6e6fa;
+}
+
+.datepicker-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.modal__reservation-input {
+    margin-top: 25px;
+}
+
+.modal__reservation-label {
+    width: 100%;
+    position: relative;
+}
+
+.modal__reservation-select {
+    border: 1px solid #708090;
+    background-color: #e6e6fa;
+}
+
+.modal__reservation-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.modal__reservation-close {
+    display: block;
+    border: 1px solid #808080;
+    padding: 6px 12px;
+    background-color: #c0c0c0;
+}
+
+.modal__reservation-submit {
+    display: block;
+    border: 1px solid #b0c4de;
+    padding: 6px 12px;
+    background-color: #4169e1;
+    border-radius: 6px;
+    color: #ffffff;
+}
+
+.modal__review-list-area {
+    width: 100%;
+    height: 250px;
+    overflow-y: scroll;
+}
+
+.modal__review-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    border-top: 1px solid #dddddd;
+}
+
+.modal__review-list-left {
+    width: 100%;
+}
+
+.modal__review-list-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__newReview-content {
+    border-top: 5px solid #dddddd;
+}
+
+.modal__newReview-inner {
+    padding-top: 10px;
+}
+
+.modal__star-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal__comment-input {
+    width: 100%;
+    height: 200px;
+    border: 2px solid #dddddd;
+    padding: 10px;
+}
+
+.modal__review-fotter-button {
+    width: 100%;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.modal__review-submit-text {
+    display: block;
+    width: 100%;
+    height: 80px;
+    padding: 8px 0px;
+    background-color: #4169e1;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.modal__star-shop {
+    width: 100%;
+}
+
+.modal__star-rating {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.modal__star-input {
+    display: none;
+}
+
+.modal__star-label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 5px 0 0;
+    background: url('/images/star.png');
+    background-size: contain;
+    cursor: pointer;
+}
+
+.star-list-label {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 0 5px 0 0;
+    background: url('/images/star.png');
+    background-size: contain;
+    cursor: pointer;
+}
+
+.modal__star-label.fill,
+.star-list-label.fill-list {
+    background: url('/images/star2.png');
+    background-size: contain;
 }
 
 .mypage__reservation-head {
@@ -42,6 +269,11 @@
 
 .mypage__reservation-head-left {
     margin: 0;
+}
+
+.mypage__reservation-head-right {
+    margin: 0;
+    padding: 0;
 }
 
 .mypage__reservation-head-left-text {

@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'debug' => (bool) env('APP_DEBUG', false),
+    'debug' => (bool) env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Tokyo',
 
     /*
     |--------------------------------------------------------------------------
@@ -178,7 +178,7 @@ return [
 
         // 他のサービスプロバイダー
         Laravel\Fortify\FortifyServiceProvider::class,
-
+        Livewire\LivewireServiceProvider::class,
     ],
 
     /*
@@ -233,6 +233,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Livewire' => Livewire\Livewire::class,
 
     ],
 

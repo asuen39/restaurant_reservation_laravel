@@ -24,7 +24,7 @@ class Reviews extends Model
     }
 
     /*リレーションシップ - Reservationsモデル */
-    public function Reservation()
+    public function reservation()
     {
         return $this->belongsTo(Reservations::class, 'reservation_id');
     }

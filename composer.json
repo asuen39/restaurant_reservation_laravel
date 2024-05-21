@@ -1,7 +1,8 @@
 {
     "require": {
         "laravel/fortify": "^1.21",
-        "doctrine/dbal": "^4.0"
+        "doctrine/dbal": "^4.0",
+        "livewire/livewire": "^3.4"
     },
     "autoload": {
         "psr-4": {
