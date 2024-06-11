@@ -45,7 +45,7 @@
                             </select>
                         </label>
                     </div>
-                    <form class="" action="{{ route('makeReservation') }}" method="post">
+                    <form class="" action="{{ route('showPaymentForm') }}" method="post">
                         <div class="detail__reservation-form">
                             @csrf
                             <ul class="detail__reservation-form-ul">

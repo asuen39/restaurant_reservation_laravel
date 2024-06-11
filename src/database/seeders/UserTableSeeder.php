@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class UserTableSeeder extends Seeder
 {
@@ -21,6 +22,8 @@ class UserTableSeeder extends Seeder
                 'name' => 'テスト太郎',
                 'email' => 'test@example.com',
                 'password' => Hash::make('password'),
+                'email_verification_token' => Str::random(10),
+                'email_verified_at' => now(),
             ],
         ];
 

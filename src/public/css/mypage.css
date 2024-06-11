@@ -44,7 +44,7 @@
 .mypage__reservation-content-reviews {
     position: absolute;
     right: 25px;
-    bottom: 25px;
+    top: 150px;
 }
 
 .mypage__reservation-edit-button {
@@ -379,6 +379,12 @@
 
 .mypage__shop-favorite-red {
     color: #ff0000;
+}
+
+.qr-code {
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
 }
 
 /* 1200px以下 */

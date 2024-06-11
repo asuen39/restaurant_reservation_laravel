@@ -54,6 +54,7 @@
                         <p class="mypage__reservation-list-text">{{ $reservation->party_size }}人</p>
                     </li>
                 </ul>
+                <div class="qr-code">{!! $qrCode !!}</div>
                 <div class="mypage__reservation-content-edit">
                     @livewire('modal', ['reservation' => $reservation], key($reservation->id))
                 </div>

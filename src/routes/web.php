@@ -23,6 +23,14 @@ use App\Http\Controllers\MyPageController;
 Route::get('/register', [RegisteredUserController::class, 'register'])->name('register');
 Route::post('/register', [RegisteredUserController::class, 'create']);
 
+//認証メールからの確認用URLをクリックすると、このルートが呼ばれる
+Route::get('/verify-email/{token}', [RegisteredUserController::class, 'verify'])->name('verify.email');
+
+//認証メールからの確認用URLをクリックすると、このルートが呼ばれる
+Route::get('/verification/success', function () {
+    return view('verification.success');
+})->name('verification.success');
+
 Route::get('/thanks', [ThanksController::class, 'thanks'])->name('thanks');
 
 Route::get('/login', [LoginController::class, 'login'])->name('login');
@@ -34,7 +42,9 @@ Route::post('/', [ShopListController::class, 'favorite'])->name('favorite');
 Route::get('/search', [ShopListController::class, 'search'])->name('search');
 
 Route::get('/detail/{id}', [ShopDetailController::class, 'detail'])->name('detail');
-Route::post('/detail', [ShopDetailController::class, 'makeReservation'])->name('makeReservation');
+Route::post('/detail', [ShopDetailController::class, 'showPaymentForm'])->name('showPaymentForm');
+
+Route::post('/payment', [ShopDetailController::class, 'processPayment'])->name('processPayment');
 
 Route::get('/done', [DoneController::class, 'done'])->name('done');
 

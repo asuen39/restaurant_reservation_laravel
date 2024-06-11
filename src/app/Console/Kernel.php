@@ -3,7 +3,10 @@
 namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use App\Models\Reservations;
+use App\Mail\ShopMail;
 
 class Kernel extends ConsoleKernel
 {
@@ -15,7 +18,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->command('send:reservation-reminders')->dailyAt('08:00');
     }
 
     /**
@@ -25,7 +28,7 @@ class Kernel extends ConsoleKernel
      */
     protected function commands()
     {
-        $this->load(__DIR__.'/Commands');
+        $this->load(__DIR__ . '/Commands');
 
         require base_path('routes/console.php');
     }

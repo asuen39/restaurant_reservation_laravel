@@ -2,7 +2,11 @@
     "require": {
         "laravel/fortify": "^1.21",
         "doctrine/dbal": "^4.0",
-        "livewire/livewire": "^3.4"
+        "livewire/livewire": "^3.4",
+        "stripe/stripe-php": "^14.9",
+        "phpoption/phpoption": "^1.9",
+        "vlucas/phpdotenv": "^5.6",
+        "aws/aws-sdk-php": "^3.311"
     },
     "autoload": {
         "psr-4": {

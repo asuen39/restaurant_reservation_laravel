@@ -7,6 +7,7 @@ use App\Models\Favorites;
 use App\Models\Reviews;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class MyPageController extends Controller
 {
@@ -21,7 +22,10 @@ class MyPageController extends Controller
         // お気に入りの店舗情報を取得
         $favorites = Favorites::where('user_id', $userId)->get();
 
-        return view('mypage', compact('reservations', 'favorites'));
+        // QRコードを生成
+        $qrCode = QrCode::size(60)->generate($userId);
+
+        return view('mypage', compact('reservations', 'favorites', 'qrCode'));
     }
 
     public function updateProfile(Request $request)
