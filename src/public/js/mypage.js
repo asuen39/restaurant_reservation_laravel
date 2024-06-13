@@ -5,33 +5,41 @@ document.addEventListener("livewire:load", function () {
         // モーダルが開かれたときの処理
         // datepickerの初期化
         $('#mypage_datepicker').datepicker({
+            startDate: new Date(),
             format: 'yyyy/mm/dd',
-            container: '.datepicker',
             autoclose: true,
             language: 'ja',
+            container: '.datepicker__calender-positon',
         });
 
-        // 今日の日付を設定
-        $('#mypage_datepicker').datepicker('setDate', 'today');
-
         // 24時間分のオプションを生成する処理
+        let selectElement = document.getElementById("mypage_reservation_time");
         for (let hour = 0; hour < 24; hour++) {
             for (let minute = 0; minute < 60; minute += 30) {
                 // 時刻をフォーマットしてオプションを生成
                 let time = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
-                let option = document.createElement("option");
-                option.text = time;
-                option.value = time;
-                document.getElementById("mypage_reservation_time").appendChild(option);
+                // 既に同じ値のオプションが存在するか確認
+                let exists = Array.from(selectElement.options).some(option => option.value === time);
+                if (!exists) {
+                    let option = document.createElement("option");
+                    option.text = time;
+                    option.value = time;
+                    selectElement.appendChild(option);
+                }
             }
         }
 
         // 人数分のオプションを生成する処理
+        let selectNumber = document.getElementById("mypage_reservation_number");
         for (let i = 1; i <= 50; i++) {
-            let option = document.createElement("option");
-            option.text = i;
-            option.value = i;
-            document.getElementById("mypage_reservation_number").appendChild(option);
+            // 既に同じ値のオプションが存在するか確認
+            let exists = Array.from(selectNumber.options).some(option => option.value == i);
+            if (!exists) {
+                let option = document.createElement("option");
+                option.text = i;
+                option.value = i;
+                selectNumber.appendChild(option);
+            }
         }
     });
 });

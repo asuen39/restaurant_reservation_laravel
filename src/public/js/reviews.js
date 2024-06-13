@@ -22,12 +22,12 @@ document.addEventListener("livewire:load", function () {
                     }
                 });
 
-                console.log(rating);
+                // console.log(rating);
 
                 // 選択した値を隠しフィールドに設定
                 ratingInput.value = rating;
 
-                console.log('Selected rating for modal', modalId);
+                // console.log('Selected rating for modal', modalId);
             });
         });
     });

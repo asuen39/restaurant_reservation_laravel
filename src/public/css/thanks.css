@@ -1,7 +1,7 @@
 .thanks__content {
     margin: 0 auto;
     padding: 30px 15px;
-    max-width: 500px;
+    max-width: 560px;
 }
 
 .thanks__content-area {
@@ -21,6 +21,13 @@
     font-weight: 700;
     text-align: center;
     margin: 20px auto;
+}
+
+.thanks__text-small {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px;
 }
 
 .thanks__login {

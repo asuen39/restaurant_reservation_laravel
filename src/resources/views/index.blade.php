@@ -92,7 +92,4 @@
         </ul>
     </section>
 </div>
-
-<script src="{{ asset('js/all.min.js') }}"></script>
-@yield('scripts')
 @endsection

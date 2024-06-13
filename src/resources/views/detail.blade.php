@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('css')
+<link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker3.min.css') }}">
 <link rel="stylesheet" href="{{ asset('css/detail.css') }}">
 @endsection
 
@@ -30,8 +31,11 @@
                 <section class="detail__reservation">
                     <h4 class="detail__reservation-title">予約</h4>
                     <div class="datepicker">
-                        <input type="text" class="datepicker-input form-control" id="datepicker">
-                        <span class="datepicker-icon"><i class="fa-regular fa-calendar fa-fw"></i></span>
+                        <div class="datepicker__inner">
+                            <input type="text" class="form-control" id="datepicker">
+                            <span class="datepicker-icon"><i class="fa-regular fa-calendar fa-fw"></i></span>
+                        </div>
+                        <div class="datepicker__calender-positon"></div>
                     </div>
                     <div class="detail__reservation-input">
                         <label class="detail__label">
@@ -101,4 +105,10 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+<script type="text/javascript" src="{{ asset('js/bootstrap-datepicker.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/bootstrap-datepicker.ja.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/detail.js') }}"></script>
 @endsection

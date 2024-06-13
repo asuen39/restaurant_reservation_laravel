@@ -8,7 +8,6 @@
     <title>飲食店予約サービスアプリケーション</title>
     <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker3.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/common.css') }}">
     @yield('css')
     @livewireStyles
@@ -59,10 +58,7 @@
     </div>
     <script type="text/javascript" src="{{ asset('js/jquery-3.7.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/all.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/bootstrap-datepicker.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/bootstrap-datepicker.ja.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/header.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/detail.js') }}"></script>
     @yield('scripts')
     @livewireScripts
 </body>

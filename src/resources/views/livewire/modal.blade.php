@@ -12,8 +12,11 @@
                     <input type="hidden" name="shop_id" value="{{ $reservation->shop_id }}">
                     <h4>予約編集</h4>
                     <div class="datepicker">
-                        <input type="text" class="datepicker-input form-control" name="mypage_datepicker" id="mypage_datepicker">
-                        <span class="datepicker-icon"><i class="fa-regular fa-calendar fa-fw"></i></span>
+                        <div class="datepicker__inner">
+                            <input type="text" class="datepicker-input form-control" name="mypage_datepicker" id="mypage_datepicker" value="{{ $reservation->reservation_date }}">
+                            <span class="datepicker-icon"><i class="fa-regular fa-calendar fa-fw"></i></span>
+                            <div class="datepicker__calender-positon"></div>
+                        </div>
                     </div>
                     <div class="modal__reservation-input">
                         <label class="modal__reservation-label">
@@ -40,5 +43,10 @@
         </div>
     </div>
     @endif
-    <script src="{{ asset('js/mypage.js') }}"></script>
 </div>
+
+@section('scripts')
+<script type="text/javascript" src="{{ asset('js/bootstrap-datepicker.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/bootstrap-datepicker.ja.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/mypage.js') }}"></script>
+@endsection

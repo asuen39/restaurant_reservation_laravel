@@ -9,8 +9,7 @@
 <body>
     <h1>メールアドレスの登録確認</h1>
     <p>メールアドレスの登録ありがとうございます。</p>
-    <a href="{{ $verificationUrl }}">本人確認の為メールの認証をお願いします。</a>
-
+    <a href="{{ $verificationUrl }}" target="_blank">本人確認の為メールの認証をお願いします。</a>
 </body>
 
 </html>

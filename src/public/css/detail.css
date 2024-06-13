@@ -112,11 +112,21 @@
 }
 
 .datepicker {
-    width: 200px;
-    height: 40px;
     position: relative;
-    top: 0 !important;
-    margin-left: 25px;
+    margin: auto 25px;
+    padding: 0;
+}
+
+.datepicker__calender-positon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+}
+
+.datepicker__inner {
+    width: 200px;
+    position: relative;
 }
 
 .detail__reservation-input {
@@ -138,13 +148,6 @@
     right: 15px;
     top: 15px;
     width: 0;
-}
-
-.datepicker-input {
-    width: 200px;
-    height: 100%;
-    border: 1px solid #ffffff;
-    background-color: #ffffff;
 }
 
 .datepicker-icon {

@@ -1,8 +1,10 @@
 @extends('layouts.app')
 
 @section('css')
+<link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker.min.css') }}">
 <link rel="stylesheet" href="{{ asset('css/mypage.css') }}">
 @endsection
+
 
 @section('content')
 <div class="mypage__content">
