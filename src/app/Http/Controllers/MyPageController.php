@@ -22,10 +22,7 @@ class MyPageController extends Controller
         // お気に入りの店舗情報を取得
         $favorites = Favorites::where('user_id', $userId)->get();
 
-        // QRコードを生成
-        $qrCode = QrCode::size(60)->generate($userId);
-
-        return view('mypage', compact('reservations', 'favorites', 'qrCode'));
+        return view('mypage', compact('reservations', 'favorites'));
     }
 
     public function updateProfile(Request $request)
@@ -94,5 +91,18 @@ class MyPageController extends Controller
 
         // マイページへ戻る
         return redirect()->route('mypage');
+    }
+
+    //qrコードを読み取った後の処理
+    public function readQrCode($id)
+    {
+        // 予約レコードを取得
+        $reservation = Reservations::findOrFail($id);
+
+        // QRコードフラグをtrueに更新
+        $reservation->qr_flag = true;
+        $reservation->save();
+
+        return redirect()->route('mypage')->with('success', 'QR code read successfully!');
     }
 }

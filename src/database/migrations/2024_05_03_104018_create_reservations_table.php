@@ -24,6 +24,7 @@ class CreateReservationsTable extends Migration
             $table->date('reservation_date')->nullable(false);
             $table->time('reservation_time')->nullable(false);
             $table->unsignedBigInteger('party_size')->nullable(false);
+            $table->boolean('qr_flag')->default(false); // QRコード発行フラグ
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
         });

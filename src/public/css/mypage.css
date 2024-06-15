@@ -47,6 +47,12 @@
     top: 150px;
 }
 
+.mypage__reservation-content-qrCode {
+    width: auto;
+    height: 60px;
+    margin-top: 20px;
+}
+
 .mypage__reservation-edit-button {
     padding: 6px 10px;
     border: 1px solid #ffa500;
@@ -81,6 +87,14 @@
 }
 
 .reviews__modal-body {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    max-width: 700px;
+}
+
+.qrcode__modal-body {
     position: relative;
     display: inline-block;
     vertical-align: middle;
@@ -391,12 +405,6 @@
 
 .mypage__shop-favorite-red {
     color: #ff0000;
-}
-
-.qr-code {
-    width: 60px;
-    height: 60px;
-    margin-top: 20px;
 }
 
 /* 1200px以下 */

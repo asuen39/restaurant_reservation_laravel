@@ -19,11 +19,6 @@ class ReviewsModal extends Component
     public $comment;
     public $selectedRating;
 
-    // protected $rules = [
-    //     'selectedRating' => 'required',
-    //     'comment' => 'nullable|string',
-    // ];
-
     // $reservation変数をコンポーネントに渡すためのmountメソッド
     public function mount(Reservations $reservation)
     {
@@ -39,13 +34,6 @@ class ReviewsModal extends Component
         $this->isOpen = true;
         $this->emit('reviewsOpenedjs'); // モーダルが開かれたことをJavaScriptに通知する
     }
-
-    // レビューの星評価を選択する処理
-    // public function selectedRatingChanged($rating)
-    // {
-    //     $this->selectedRating = $rating;
-    //     dd($this->selectedRatin);
-    // }
 
     public function closeModal()
     {

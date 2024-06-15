@@ -52,3 +52,5 @@ Route::get('/mypage', [MyPageController::class, 'mypage'])->name('mypage');
 Route::post('/updateProfile', [MyPageController::class, 'updateProfile'])->name('updateProfile');
 Route::delete('/deleteReservation/{reservation}', [MyPageController::class, 'deleteReservation'])->name('deleteReservation');
 Route::post('/submitReview', [MyPageController::class, 'submitReview'])->name('submitReview');
+//qrコードを読み取った後の処理
+Route::get('/reservations/read-qr-code/{id}', [MyPageController::class, 'readQrCode'])->name('reservations.readQrCode');
