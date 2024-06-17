@@ -96,13 +96,18 @@ class MyPageController extends Controller
     //qrコードを読み取った後の処理
     public function readQrCode($id)
     {
-        // 予約レコードを取得
-        $reservation = Reservations::findOrFail($id);
+        // 該当の予約を取得
+        $reservation = Reservations::find($id);
 
-        // QRコードフラグをtrueに更新
+        // 存在するか確認
+        if (!$reservation) {
+            return response()->json(['message' => '予約が見つかりませんでした'], 404);
+        }
+
+        // qr_flag を true に更新
         $reservation->qr_flag = true;
         $reservation->save();
 
-        return redirect()->route('mypage')->with('success', 'QR code read successfully!');
+        return response()->json(['message' => 'QR コードが正常に読み取られ、フラグが更新されました']);
     }
 }

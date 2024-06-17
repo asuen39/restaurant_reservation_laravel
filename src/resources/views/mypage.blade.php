@@ -57,7 +57,7 @@
                     </li>
                 </ul>
                 <div class="mypage__reservation-content-qrCode">
-                    <livewire:qrcode-modal :reservationId="$reservation->id" :key="$reservation->id" />
+                    @livewire('qrcode-modal', ['reservationId' => $reservation->id], key($reservation->id))
                 </div>
                 <div class="mypage__reservation-content-edit">
                     @livewire('modal', ['reservation' => $reservation], key($reservation->id))

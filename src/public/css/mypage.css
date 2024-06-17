@@ -287,6 +287,10 @@
     background-size: contain;
 }
 
+.modal__qr-content {
+    text-align: center;
+}
+
 .mypage__reservation-head {
     display: flex;
     justify-content: space-between;
