@@ -11,7 +11,6 @@
         <p class="thanks__text">会員登録ありがとうございます。<br />現在、仮登録の状態です。</p>
         <p class="thanks__text-small">登録されたメールアドレス宛てに認証メールが送られています。
             <br />認証を完了してください。
-            <br /><a href="/login">ログイン</a>はこちらから
         </p>
     </div>
 </div>

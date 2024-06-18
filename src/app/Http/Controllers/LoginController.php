@@ -21,6 +21,20 @@ class LoginController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials, $request->filled('remember'))) {
+            // ログインしたユーザーを取得
+            $user = Auth::user();
+
+            // email_verified_atを確認
+            if (is_null($user->email_verified_at)) {
+                // 認証を解除
+                Auth::logout();
+
+                // エラーメッセージを追加してログイン画面にリダイレクト
+                return back()->withInput()->withErrors([
+                    'login_error' => '認証メールアドレスが確認されていません。認証メールをご確認ください。',
+                ]);
+            }
+
             // ログイン成功時のリダイレクト先を指定
             return redirect()->intended('/');
         }
