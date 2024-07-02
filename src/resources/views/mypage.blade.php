@@ -33,7 +33,7 @@
                         <form action="{{ route('deleteReservation', $reservation->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" style="background:none; border:none;">
+                            <button type="submit">
                                 <img src="{{ asset('images/close_icon.png') }}" class="close__icon" alt="close">
                             </button>
                         </form>

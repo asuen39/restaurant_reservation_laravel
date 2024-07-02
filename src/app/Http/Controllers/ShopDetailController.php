@@ -4,12 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Shops;
-use App\Models\Genres;
-use App\Models\Countrys;
 use App\Models\Reservations;
-use App\Http\Requests\UserFormRequest;
-use Stripe\Stripe;
-use Stripe\Charge;
 use Exception;
 
 class ShopDetailController extends Controller
@@ -19,12 +14,6 @@ class ShopDetailController extends Controller
     {
         // すべてのショップ情報を取得
         $shops = Shops::with('belongsToCountry', 'belongsToGenres')->find($id);
-
-        // すべての都道府県情報を取得
-        $countrys = Countrys::all();
-
-        // すべてのジャンル情報を取得
-        $genres = Genres::all();
 
         // $id を使って詳細データを取得し、詳細ビューに渡す
         return view('detail')->with('shops', $shops, 'id', $id);

@@ -3,15 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
 use App\Models\Shops;
 use App\Models\Genres;
 use App\Models\Countrys;
-use App\Models\Reservations;
 use App\Models\Favorites;
-use Illuminate\Pagination\Paginator;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Validator;
 
 class ShopListController extends Controller
 {

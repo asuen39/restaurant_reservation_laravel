@@ -4,7 +4,6 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Reservations;
-use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class QrcodeModal extends Component
 {

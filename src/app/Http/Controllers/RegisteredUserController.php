@@ -6,11 +6,7 @@ use Laravel\Fortify\Contracts\CreatesNewUsers;
 use App\Http\Requests\RegisterRequest;
 use App\Mail\RegistrationMail;
 use App\Models\User;
-use App\Mail\VerifyEmail;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Validator;
 
 class RegisteredUserController extends Controller
 {
