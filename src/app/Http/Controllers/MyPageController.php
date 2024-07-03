@@ -76,8 +76,8 @@ class MyPageController extends Controller
         // 送信されたフォームデータを取得
         $revieData = $request->validate([
             'shop_id' => 'required|integer',
-            'rating_star' => 'required|integer|min:1|max:5',
-            'comment' => 'required|string',
+            'rating_star' => 'required|integer|min:0|max:5',
+            'comment' => 'nullable|string',
         ]);
 
         // モデルを使用してデータベースに保存
@@ -85,7 +85,7 @@ class MyPageController extends Controller
             'user_id' => $userId,
             'reservation_id' => $revieData['shop_id'],
             'rating' => $revieData['rating_star'],
-            'comment' => $revieData['comment'],
+            'comment' => $revieData['comment'] ?? '',
         ]);
 
         // マイページへ戻る

@@ -6,7 +6,6 @@
     <div class="mypage__modal-edit">
         <div class="reviews__modal-body">
             <div class="modal-content">
-                <span class="close" wire:click="closeModal">&times;</span>
                 <h4>レビュー一覧</h4>
                 <ul class="modal__review-list-area">
                     @foreach($reviews as $review)
@@ -49,8 +48,11 @@
                                 <input type="hidden" name="rating_star" id="rating_star" value="0">
                             </div>
                             <textarea id="comment" name="comment" class="modal__comment-input" placeholder="感想を入力してください"></textarea>
-                            <div class="modal__review-fotter-button">
-                                <button type="submit" class="modal__review-submit-text">レビューを書き込む</button>
+                            <div class="modal__reservation-footer">
+                                <button wire:click="closeModal()" type="button" class="modal__reservation-close">閉じる</button>
+                                <div>
+                                    <button type="submit" class="modal__review-submit-text">レビューを書き込む</button>
+                                </div>
                             </div>
                         </form>
                     </div>

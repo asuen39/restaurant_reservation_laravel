@@ -235,11 +235,10 @@
 
 .modal__review-submit-text {
     display: block;
-    width: 100%;
-    height: 80px;
-    padding: 8px 0px;
+    padding: 6px 12px;
+    border: 1px solid #b0c4de;
     background-color: #4169e1;
-    border-radius: 10px;
+    border-radius: 6px;
     color: #ffffff;
     font-size: 20px;
 }

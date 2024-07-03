@@ -20,7 +20,6 @@ class CreateReviewsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             /*カラム名:reservation_id, 型:bigint unsigned, NOT NULL:〇, FOREIGN KEY:reservations(id) */
             $table->unsignedBigInteger('reservation_id')->nullable(false);
-            $table->foreign('reservation_id')->references('id')->on('reservations');
             $table->unsignedBigInteger('rating')->nullable(false);
             $table->text('comment')->nullable(false);
             $table->timestamp('created_at')->useCurrent()->nullable();
