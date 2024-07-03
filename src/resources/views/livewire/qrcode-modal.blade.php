@@ -9,9 +9,9 @@
             <div class="modal-content">
                 <div>
                     @if ($reservation)
-                    <h2>QRコード:</h2>
+                    <h2 class="qrcode__modal-sp-h2">QRコード:</h2>
                     <p class="modal__qr-content">{!! QrCode::size(180)->generate($qrCodeUrl) !!}</p>
-                    <h2>ローカル確認用QRコード:</h2>
+                    <h2 class="qrcode__modal-sp-h2">ローカル確認用QRコード:</h2>
                     <p class="modal__qr-content">{!! QrCode::size(180)->generate($localQrCodeUrl) !!}</p>
                     @else
                     <p>この予約には QR コードがありません</p>

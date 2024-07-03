@@ -6,7 +6,7 @@
     <div class="mypage__modal-edit">
         <div class="reviews__modal-body">
             <div class="modal-content">
-                <h4>レビュー一覧</h4>
+                <h4 class="modal__sp-h4">レビュー一覧</h4>
                 <ul class="modal__review-list-area">
                     @foreach($reviews as $review)
                     <li class="modal__review-list">

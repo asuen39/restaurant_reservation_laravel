@@ -90,7 +90,7 @@
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    width: 100%;
+    width: 90%;
     max-width: 700px;
 }
 
@@ -98,7 +98,7 @@
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    width: 100%;
+    width: 90%;
     max-width: 700px;
 }
 
@@ -267,6 +267,7 @@
     margin: 0 5px 0 0;
     background: url('/images/star.png');
     background-size: contain;
+    background-repeat: no-repeat;
     cursor: pointer;
 }
 
@@ -277,6 +278,7 @@
     margin: 0 5px 0 0;
     background: url('/images/star.png');
     background-size: contain;
+    background-repeat: no-repeat;
     cursor: pointer;
 }
 
@@ -284,6 +286,7 @@
 .star-list-label.fill-list {
     background: url('/images/star2.png');
     background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .modal__qr-content {
@@ -447,5 +450,48 @@
 @media screen and (max-width:480px) {
     .mypage__favorite-shop-list {
         width: 100%;
+    }
+
+    .modal-content {
+        padding: 15px;
+    }
+
+    .modal__review-list-area {
+        height: 120px;
+    }
+
+    .modal__sp-h4 {
+        font-size: 16px;
+    }
+
+    .modal__review-list {
+        font-size: 14px;
+    }
+
+    .modal__star-content {
+        height: 45px;
+    }
+
+    .modal__comment-input {
+        height: 150px;
+    }
+
+    .modal__star-shop {
+        font-size: 16px;
+    }
+
+    .modal__reservation-footer {
+        flex-flow: column;
+        justify-content: initial;
+        margin-top: 10px;
+    }
+
+    .modal__reservation-close,
+    .modal__review-submit-text {
+        margin: 5px auto;
+    }
+
+    .qrcode__modal-sp-h2 {
+        font-size: 20px;
     }
 }
