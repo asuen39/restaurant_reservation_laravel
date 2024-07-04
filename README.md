@@ -64,8 +64,9 @@
 - Font Awesome
 - Stripe
 - AWS EC2、RDS、S3
-- AWS Simple Email Service
-・メール機能を利用する為にお名前ドットコム (https://www.onamae.com/) で無料ドメインの取得とRDSでドメイン登録を行っています。
+- AWS Simple Email Service<br>
+・メール機能開通の為にお名前ドットコム (https://www.onamae.com/) で無料ドメインの取得<br>
+・RDSでのドメイン登録
 
 ## テーブル設計
 ![table_image](https://github.com/asuen39/restaurant_reservation_laravel/assets/68514566/1330d09c-23e2-4591-861a-a83c0d9a6666)
