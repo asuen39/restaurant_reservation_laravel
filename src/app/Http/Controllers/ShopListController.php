@@ -7,11 +7,18 @@ use App\Models\Shops;
 use App\Models\Genres;
 use App\Models\Countrys;
 use App\Models\Favorites;
+use Illuminate\Pagination\Paginator;
 
 class ShopListController extends Controller
 {
     protected $countrys; // 都道府県情報を格納するプロパティ
     protected $genres; // ジャンル情報を格納するプロパティ
+
+    public function boot()
+    {
+        // Bootstrapを使ってページネーションをスタイリングする場合
+        Paginator::useBootstrap();
+    }
 
     // コンストラクターで都道府県情報を取得し、プロパティにセットする
     public function __construct()
@@ -31,7 +38,10 @@ class ShopListController extends Controller
         }
 
         // すべてのショップ情報を取得
-        $shops = Shops::with('belongsToCountry', 'belongsToGenres')->get();
+        $shops = Shops::with('belongsToCountry', 'belongsToGenres')->paginate(12);
+
+        // boot メソッドを呼び出し
+        $this->boot();
 
         // ユーザーIDごとにデータベースからお気に入り情報を取得
         $favoriteShops = Favorites::where('user_id', auth()->user()->id)->pluck('shop_id')->toArray();
@@ -93,11 +103,16 @@ class ShopListController extends Controller
             });
         }
 
-        $searchResults = $query->get();
+        // 検索結果をページネーションで取得
+        $searchResults = $query->paginate(12);
+
+        // boot メソッドを呼び出し
+        $this->boot();
 
         // ユーザーIDごとにデータベースからお気に入り情報を取得
         $favoriteShops = Favorites::where('user_id', auth()->user()->id)->pluck('shop_id')->toArray();
 
+        // ビューに変数を渡す
         return view('index', compact('searchResults', 'favoriteShops'))->with('countrys', $this->countrys)->with('genres', $this->genres);
     }
 }

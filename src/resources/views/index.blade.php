@@ -91,5 +91,19 @@
             @endif
         </ul>
     </section>
+    @if(isset($shops))
+    <div class="d-flex justify-content-center">
+        <div class="pagination-links">
+            {{ $shops->links() }}
+        </div>
+    </div>
+    @endif
+    @if(isset($searchResults))
+    <div class="d-flex justify-content-center">
+        <div class="pagination-links">
+            {{ $searchResults->links() }}
+        </div>
+    </div>
+    @endif
 </div>
 @endsection
