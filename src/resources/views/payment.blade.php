@@ -9,8 +9,8 @@
         {{ session('status') }}
     </div>
     @endif
-    <div class="p-5">
-        <div class="col-6 card">
+    <div class="pt-5 pb-5">
+        <div class="col-lg-7 col-md-9 mx-auto card">
             <div class="card-header">Stripe決済</div>
             <div class="card-body">
                 <form id="card-form" action="{{ route('processPayment') }}" method="POST">
