@@ -73,9 +73,7 @@
 ![table_image](https://github.com/asuen39/restaurant_reservation_laravel/assets/68514566/1330d09c-23e2-4591-861a-a83c0d9a6666)
 
 ## ER図
-![er](https://github.com/asuen39/restaurant_reservation_laravel/assets/68514566/d578f102-e169-4fcc-aa30-8c853560605c)
-
-
+![er](https://github.com/asuen39/restaurant_reservation_laravel/assets/68514566/766343c0-b55f-4fed-88ad-58d60a3d8b6a)
 
 ## 環境構築
 - git cloneをする。
