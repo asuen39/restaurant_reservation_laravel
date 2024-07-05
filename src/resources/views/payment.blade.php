@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('css')
+<link rel="stylesheet" href="{{ asset('css/payment.css') }}">
+@endsection
+
 @section('content')
 <div class="container">
     @if (session('flash_alert'))
@@ -32,7 +36,10 @@
 
                     <div id="card-errors" class="text-danger"></div>
 
-                    <button class="mt-3 btn btn-primary">支払い</button>
+                    <div class="card__fotter">
+                        <button class="mt-3 btn btn-primary">支払い</button>
+                        <a class="mt-3 btn btn-secondary" href="/" role="button">戻る</a>
+                    </div>
                 </form>
             </div>
         </div>

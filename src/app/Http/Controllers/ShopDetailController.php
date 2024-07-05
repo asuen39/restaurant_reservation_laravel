@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Shops;
 use App\Models\Reservations;
+use App\Http\Requests\UserFormRequest;
 use Exception;
 
 class ShopDetailController extends Controller
@@ -20,7 +21,7 @@ class ShopDetailController extends Controller
     }
 
     // 決済画面の表示
-    public function showPaymentForm(Request $request)
+    public function showPaymentForm(UserFormRequest $request)
     {
         // フォームから送信されたデータを取得
         $shop_id = $request->input('shop_id');
