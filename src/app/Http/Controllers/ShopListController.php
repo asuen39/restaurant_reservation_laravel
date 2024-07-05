@@ -93,7 +93,7 @@ class ShopListController extends Controller
             });
         }
 
-        $searchResults = $query->paginate(10);
+        $searchResults = $query->get();
 
         // ユーザーIDごとにデータベースからお気に入り情報を取得
         $favoriteShops = Favorites::where('user_id', auth()->user()->id)->pluck('shop_id')->toArray();
