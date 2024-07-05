@@ -72,7 +72,8 @@
 ![table_image](https://github.com/asuen39/restaurant_reservation_laravel/assets/68514566/1330d09c-23e2-4591-861a-a83c0d9a6666)
 
 ## ER図
-![zyokyu](https://github.com/asuen39/restaurant_reservation_laravel/assets/68514566/cbda79ef-1e5f-43cb-bf42-3ca7a2534645)
+![er](https://github.com/asuen39/restaurant_reservation_laravel/assets/68514566/d578f102-e169-4fcc-aa30-8c853560605c)
+
 
 
 ## 環境構築
