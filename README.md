@@ -21,7 +21,7 @@
 - マイページ-QRモーダル: /mypage
 
 ## 他のリポジトリ
-- git clone リンク: git@github.com/asuen39/restaurant_reservation_laravel.git</a>
+- git clone リンク: git@github.com:asuen39/restaurant_reservation_laravel.git</a>
 - aws ec2: http://43.207.71.85/register
 
 ## 機能一覧
