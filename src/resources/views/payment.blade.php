@@ -37,8 +37,8 @@
                     <div id="card-errors" class="text-danger"></div>
 
                     <div class="card__fotter">
-                        <button class="mt-3 btn btn-primary">支払い</button>
                         <a class="mt-3 btn btn-secondary" href="/" role="button">戻る</a>
+                        <button class="mt-3 btn btn-primary">支払い</button>
                     </div>
                 </form>
             </div>
