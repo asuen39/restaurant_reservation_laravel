@@ -8,7 +8,8 @@ $(document).ready(function () {
         container: '.datepicker__calender-positon' // カレンダーを表示する場所
     });
 
-    $('#datepicker').datepicker('setDate', 'today'); // 今日の日付をセット
+    var today = new Date();
+    $('#datepicker').datepicker('setDate', today); // 今日の日付をセット
 
     // 日付が選択されたときの処理
     $('#datepicker').on('changeDate', function (e) {

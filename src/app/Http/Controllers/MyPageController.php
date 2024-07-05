@@ -31,10 +31,10 @@ class MyPageController extends Controller
 
         // 送信されたフォームデータを取得
         $data = $request->validate([
-            'shop_id' => 'required|integer',
-            'mypage_datepicker' => 'required|date',
-            'mypage_reservation_time' => 'required',
-            'mypage_reservation_number' => 'required|integer',
+            'shop_id' => 'integer',
+            'mypage_datepicker' => 'nullable|date',
+            'mypage_reservation_time' => 'nullable',
+            'mypage_reservation_number' => 'nullable|integer',
         ]);
 
         // 特定のshop_idとuser_idに該当する予約情報を取得
@@ -42,10 +42,10 @@ class MyPageController extends Controller
             ->where('shop_id', $data['shop_id'])
             ->firstOrFail();
 
-        // 予約情報を更新
-        $reservation->reservation_date = $data['mypage_datepicker'];
-        $reservation->reservation_time = $data['mypage_reservation_time'];
-        $reservation->party_size = $data['mypage_reservation_number'];
+        // 未変更の項目は元の値を保持
+        $reservation->reservation_date = $data['mypage_datepicker'] ?? $reservation->reservation_date;
+        $reservation->reservation_time = $data['mypage_reservation_time'] ?? $reservation->reservation_time;
+        $reservation->party_size = $data['mypage_reservation_number'] ?? $reservation->party_size;
 
         // データベースに保存
         $reservation->save();
