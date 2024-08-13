@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker3.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/jquery.datetimepicker.min.css') }}">
 <link rel="stylesheet" href="{{ asset('css/detail.css') }}">
 @endsection
 
@@ -35,12 +35,10 @@
                             <input type="text" class="form-control" id="datepicker">
                             <span class="datepicker-icon"><i class="fa-regular fa-calendar fa-fw"></i></span>
                         </div>
-                        <div class="datepicker__calender-positon"></div>
                     </div>
                     <div class="detail__reservation-input">
                         <label class="detail__label">
-                            <select class="form-control" id="reservation_time" name="reservation_time">
-                            </select>
+                            <input type="text" class="form-control" id="reservation_time" name="reservation_time">
                         </label>
                     </div>
                     <div class="detail__reservation-input">
@@ -108,7 +106,6 @@
 @endsection
 
 @section('scripts')
-<script type="text/javascript" src="{{ asset('js/bootstrap-datepicker.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/bootstrap-datepicker.ja.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.datetimepicker.full.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/detail.js') }}"></script>
 @endsection

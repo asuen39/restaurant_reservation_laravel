@@ -60,7 +60,7 @@
 - Laravel-Livewire
 - Mysql 8.0
 - bootstrap3
-- bootstrap-datepicker
+- jquery.datetimepicker
 - Jquery
 - Font Awesome
 - Stripe

@@ -116,13 +116,6 @@
     padding: 0;
 }
 
-.datepicker__calender-positon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
-}
-
 .datepicker__inner {
     width: 200px;
     position: relative;

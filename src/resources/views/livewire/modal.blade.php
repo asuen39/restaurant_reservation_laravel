@@ -15,14 +15,11 @@
                         <div class="datepicker__inner">
                             <input type="text" class="datepicker-input form-control" name="mypage_datepicker" id="mypage_datepicker" value="{{ $reservation->reservation_date }}">
                             <span class="datepicker-icon"><i class="fa-regular fa-calendar fa-fw"></i></span>
-                            <div class="datepicker__calender-positon"></div>
                         </div>
                     </div>
                     <div class="modal__reservation-input">
                         <label class="modal__reservation-label">
-                            <select class="form-control modal__reservation-select" id="mypage_reservation_time" name="mypage_reservation_time">
-                                <option value="" selected>{{ \Carbon\Carbon::parse($reservation->reservation_time)->format('H:i') }}</option>
-                            </select>
+                            <input type="text" class="form-control modal__reservation-select" id="mypage_reservation_time" name="mypage_reservation_time" value="{{ $reservation->reservation_time->format('H:i') }}">
                         </label>
                     </div>
                     <div class="modal__reservation-input">
@@ -46,7 +43,6 @@
 </div>
 
 @section('scripts')
-<script type="text/javascript" src="{{ asset('js/bootstrap-datepicker.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/bootstrap-datepicker.ja.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.datetimepicker.full.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/mypage.js') }}"></script>
 @endsection

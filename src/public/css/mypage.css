@@ -133,13 +133,6 @@
     cursor: pointer;
 }
 
-.datepicker__calender-positon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
-}
-
 .modal__reservation-input {
     margin-top: 25px;
 }
