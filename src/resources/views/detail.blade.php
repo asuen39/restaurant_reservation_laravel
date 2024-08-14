@@ -21,7 +21,7 @@
                         <img src="{{ asset($shops->image_path) }}" class="detail__image-thumbnail" alt="Shop Image">
                     </div>
                     <p class="case__name">
-                        <span class="case__name-small">#{{ $shops->belongsToCountry->countrys }}</span>
+                        <span class="case__name-small">#{{ $shops->belongsToCountry->countries }}</span>
                         <span class="case__name-small">#{{ $shops->belongsToGenres->genres }}</span>
                     </p>
                     <p class="detail__text">{{ $shops->description }}</p>

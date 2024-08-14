@@ -15,13 +15,17 @@ class Shops extends Model
 
     // 可変項目（Mass Assignment）の設定
     protected $fillable = [
-        'shops_name', 'image_path', 'countory_id', 'genre_id', 'description',
+        'shops_name',
+        'image_path',
+        'country_id',
+        'genre_id',
+        'description',
     ];
 
-    /*リレーションシップ - Countrysモデル 他のモデルとの関連付けがある場合、リレーションシップを定義することでデータベースの結合 */
+    /*リレーションシップ - Countriesモデル 他のモデルとの関連付けがある場合、リレーションシップを定義することでデータベースの結合 */
     public function belongsToCountry()
     {
-        return $this->belongsTo(Countrys::class, 'countory_id');
+        return $this->belongsTo(Countries::class, 'country_id');
     }
 
     /*リレーションシップ - Genresモデル */

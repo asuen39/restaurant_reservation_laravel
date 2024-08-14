@@ -5,13 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Shops;
 use App\Models\Genres;
-use App\Models\Countrys;
+use App\Models\Countries;
 use App\Models\Favorites;
 use Illuminate\Pagination\Paginator;
 
 class ShopListController extends Controller
 {
-    protected $countrys; // 都道府県情報を格納するプロパティ
+    protected $countries; // 都道府県情報を格納するプロパティ
     protected $genres; // ジャンル情報を格納するプロパティ
 
     public function boot()
@@ -24,7 +24,7 @@ class ShopListController extends Controller
     public function __construct()
     {
         // すべての都道府県情報を取得
-        $this->countrys = Countrys::all();
+        $this->countries = Countries::all();
 
         // すべてのジャンル情報を取得
         $this->genres = Genres::all();
@@ -46,7 +46,7 @@ class ShopListController extends Controller
         // ユーザーIDごとにデータベースからお気に入り情報を取得
         $favoriteShops = Favorites::where('user_id', auth()->user()->id)->pluck('shop_id')->toArray();
 
-        return view('index', compact('shops', 'favoriteShops'))->with('countrys', $this->countrys)->with('genres', $this->genres);
+        return view('index', compact('shops', 'favoriteShops'))->with('countries', $this->countries)->with('genres', $this->genres);
     }
 
     public function favorite(Request $request)
@@ -91,7 +91,7 @@ class ShopListController extends Controller
         if ($request->has('all_areas')) {
             $allAreas = $request->input('all_areas');
             $query->whereHas('belongsToCountry', function ($query) use ($allAreas) {
-                $query->where('countrys', $allAreas);
+                $query->where('countries', $allAreas);
             });
         }
 
@@ -113,6 +113,6 @@ class ShopListController extends Controller
         $favoriteShops = Favorites::where('user_id', auth()->user()->id)->pluck('shop_id')->toArray();
 
         // ビューに変数を渡す
-        return view('index', compact('searchResults', 'favoriteShops'))->with('countrys', $this->countrys)->with('genres', $this->genres);
+        return view('index', compact('searchResults', 'favoriteShops'))->with('countries', $this->countries)->with('genres', $this->genres);
     }
 }

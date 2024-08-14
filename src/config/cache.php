@@ -83,7 +83,7 @@ return [
             'driver' => 'dynamodb',
             'key' => env('AWS_ACCESS_KEY_ID'),
             'secret' => env('AWS_SECRET_ACCESS_KEY'),
-            'countory_id' => env('AWS_DEFAULT_REGION', 'ap-northeast-1'),
+            'country_id' => env('AWS_DEFAULT_REGION', 'ap-northeast-1'),
             'table' => env('DYNAMODB_CACHE_TABLE', 'cache'),
             'endpoint' => env('DYNAMODB_ENDPOINT'),
         ],

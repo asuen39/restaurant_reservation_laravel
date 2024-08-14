@@ -23,7 +23,7 @@ class GenresTableSeeder extends Seeder
             ['genres' => 'ラーメン'],
         ];
 
-        // countrysテーブルにデータを挿入
+        // genresテーブルにデータを挿入
         DB::table('genres')->insert($genres);
     }
 }

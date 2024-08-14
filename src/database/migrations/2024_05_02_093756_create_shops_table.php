@@ -18,9 +18,9 @@ class CreateShopsTable extends Migration
             $table->bigIncrements('id');
             $table->string('shops_name', 255)->nullable(false);
             $table->string('image_path', 255)->nullable(false);
-            /*カラム名:countory_id, 型:bigint unsigned, NOT NULL:〇, FOREIGN KEY:countrys(id) */
-            $table->unsignedBigInteger('countory_id')->nullable(false);
-            $table->foreign('countory_id')->references('id')->on('countrys');
+            /*カラム名:country_id, 型:bigint unsigned, NOT NULL:〇, FOREIGN KEY:countries(id) */
+            $table->unsignedBigInteger('country_id')->nullable(false);
+            $table->foreign('country_id')->references('id')->on('countries');
             /*カラム名:genre_id, 型:bigint unsigned, NOT NULL:〇, FOREIGN KEY:shop(genres) */
             $table->unsignedBigInteger('genre_id')->nullable(false);
             $table->foreign('genre_id')->references('id')->on('genres');
