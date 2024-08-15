@@ -36,7 +36,7 @@ class LoginController extends Controller
             }
 
             // ログイン成功時のリダイレクト先を指定
-            return redirect()->intended('/');
+            return redirect()->route('index');
         }
 
         // ログインに失敗した場合は、エラーメッセージを追加してログイン画面にリダイレクト

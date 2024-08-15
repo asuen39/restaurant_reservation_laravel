@@ -10,11 +10,22 @@ use Exception;
 
 class ShopDetailController extends Controller
 {
+    //詳細ページ表示 - IDなし
+    public function noDetail()
+    {
+        return redirect()->route('index')->with('error', '無効な店舗です。');
+    }
+
     //詳細ページ表示
     public function detail($id)
     {
         // すべてのショップ情報を取得
         $shops = Shops::with('belongsToCountry', 'belongsToGenres')->find($id);
+
+        // ショップが存在しない場合は検索ページにリダイレクト
+        if (!$shops) {
+            return redirect()->route('index')->with('error', '無効な店舗です。');
+        }
 
         // $id を使って詳細データを取得し、詳細ビューに渡す
         return view('detail')->with('shops', $shops, 'id', $id);
@@ -36,6 +47,13 @@ class ShopDetailController extends Controller
     }
 
     // 決済処理
+    // 直接アクセスされた場合
+    public function noPayment()
+    {
+        // 任意のビューを表示するか、リダイレクトする
+        return redirect()->route('search')->with('error', '直接アクセスは禁止されています。');
+    }
+
     public function processPayment(Request $request)
     {
         \Stripe\Stripe::setApiKey(config('stripe.stripe_secret_key'));

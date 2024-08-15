@@ -41,22 +41,36 @@ Route::post('/login', [LoginController::class, 'postLogin'])->name('postLogin');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 //ログイン後の店舗一覧ページ
-Route::get('/', [ShopListController::class, 'index'])->name('index');
-Route::post('/', [ShopListController::class, 'favorite'])->name('favorite');
-Route::get('/search', [ShopListController::class, 'search'])->name('search');
+Route::middleware('auth')->group(function () {  //ログインしているユーザーのみアクセス可能
+    Route::get('/', [ShopListController::class, 'index'])->name('index');
+    Route::post('/', [ShopListController::class, 'favorite'])->name('favorite');
+    Route::get('/search', [ShopListController::class, 'search'])->name('search');
+});
 
 //店舗詳細ページ
+//IDありで/detail/{id}にアクセスした場合のルート
 Route::get('/detail/{id}', [ShopDetailController::class, 'detail'])->name('detail');
+//IDなしで/detailにアクセスした場合のルート
+Route::get('/detail', [ShopDetailController::class, 'noDetail'])->name('noDetail');
 Route::post('/detail', [ShopDetailController::class, 'showPaymentForm'])->name('showPaymentForm');
+
 //決済処理
+// 直接/paymentにアクセスした場合のルート
+Route::get('/payment', [ShopDetailController::class, 'noPayment'])->name('noPayment');
+//店舗詳細からアクセスされた場合のルート
 Route::post('/payment', [ShopDetailController::class, 'processPayment'])->name('processPayment');
-//予約完了ページ
-Route::get('/done', [DoneController::class, 'done'])->name('done');
+
+Route::middleware('auth')->group(function () {  //ログインしているユーザーのみアクセス可能
+    //予約完了ページ
+    Route::get('/done', [DoneController::class, 'done'])->name('done');
+});
 
 //マイページ
-Route::get('/mypage', [MyPageController::class, 'mypage'])->name('mypage');
-Route::post('/updateProfile', [MyPageController::class, 'updateProfile'])->name('updateProfile');
-Route::delete('/deleteReservation/{reservation}', [MyPageController::class, 'deleteReservation'])->name('deleteReservation');
-Route::post('/submitReview', [MyPageController::class, 'submitReview'])->name('submitReview');
-//qrコードを読み取った後の処理
-Route::get('/reservations/read-qr-code/{id}', [MyPageController::class, 'readQrCode'])->name('reservations.readQrCode');
+Route::middleware('auth')->group(function () {  //ログインしているユーザーのみアクセス可能
+    Route::get('/mypage', [MyPageController::class, 'mypage'])->name('mypage');
+    Route::post('/updateProfile', [MyPageController::class, 'updateProfile'])->name('updateProfile');
+    Route::delete('/deleteReservation/{reservation}', [MyPageController::class, 'deleteReservation'])->name('deleteReservation');
+    Route::post('/submitReview', [MyPageController::class, 'submitReview'])->name('submitReview');
+    //qrコードを読み取った後の処理
+    Route::get('/reservations/read-qr-code/{id}', [MyPageController::class, 'readQrCode'])->name('reservations.readQrCode');
+});
