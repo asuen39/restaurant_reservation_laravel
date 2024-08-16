@@ -20,7 +20,7 @@ class ShopDetailController extends Controller
     public function detail($id)
     {
         // すべてのショップ情報を取得
-        $shops = Shops::with('belongsToCountry', 'belongsToGenres')->find($id);
+        $shops = Shops::with('belongsToCountry', 'belongsToGenre')->find($id);
 
         // ショップが存在しない場合は検索ページにリダイレクト
         if (!$shops) {

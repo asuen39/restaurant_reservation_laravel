@@ -38,7 +38,7 @@ class ShopListController extends Controller
         }
 
         // すべてのショップ情報を取得
-        $shops = Shops::with('belongsToCountry', 'belongsToGenres')->paginate(12);
+        $shops = Shops::with('belongsToCountry', 'belongsToGenre')->paginate(12);
 
         // boot メソッドを呼び出し
         $this->boot();
@@ -98,7 +98,7 @@ class ShopListController extends Controller
         //ジャンル検索
         if ($request->has('all_genres')) {
             $allGenres = $request->input('all_genres');
-            $query->whereHas('belongsToGenres', function ($query) use ($allGenres) {
+            $query->whereHas('belongsToGenre', function ($query) use ($allGenres) {
                 $query->where('genres', $allGenres);
             });
         }

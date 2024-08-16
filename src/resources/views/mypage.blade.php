@@ -79,7 +79,7 @@
                         <h4 class="mypage__favorite-shop-title">{{ $favorite->shop->shops_name }}</h4>
                         <p class="mypage__favorite-case-name">
                             <span class="mypage__case-name-small">#{{ $favorite->shop->belongsToCountry->countries }}</span>
-                            <span class="mypage__case-name-small">#{{ $favorite->shop->belongsToGenres->genres }}</span>
+                            <span class="mypage__case-name-small">#{{ $favorite->shop->belongsToGenre->genres }}</span>
                         </p>
                         <div class="mypage__shop-footer">
                             <div class="mypage__shop-fotter-button">

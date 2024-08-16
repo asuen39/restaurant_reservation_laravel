@@ -39,7 +39,7 @@
                 <div class="shop_list-box">
                     <div class="shop_image"><img src="{{ asset($shop->image_path) }}" class="shop_image-thumbnail" alt="Shop Image"></div>
                     <h4 class="shop_title">{{ $shop->shops_name }}</h4>
-                    <p class="case_name"><span class="case_name-small">#{{ $shop->belongsToCountry->countries }}</span><span class="case_name-small">#{{ $shop->belongsToGenres->genres }}</span></p>
+                    <p class="case_name"><span class="case_name-small">#{{ $shop->belongsToCountry->countries }}</span><span class="case_name-small">#{{ $shop->belongsToGenre->genres }}</span></p>
                     <div class="shop_list-footer">
                         <p class="shop_list-button">
                             <a href="{{ route('detail', ['id' => $shop->id]) }}" class="shop_list-button-text">詳しくみる</a>
@@ -68,7 +68,7 @@
                 <div class="shop_list-box">
                     <div class="shop_image"><img src="{{ asset($shop->image_path) }}" class="shop_image-thumbnail" alt="Shop Image"></div>
                     <h4 class="shop_title">{{ $shop->shops_name }}</h4>
-                    <p class="case_name"><span class="case_name-small">#{{ $shop->belongsToCountry->countries }}</span><span class="case_name-small">#{{ $shop->belongsToGenres->genres }}</span></p>
+                    <p class="case_name"><span class="case_name-small">#{{ $shop->belongsToCountry->countries }}</span><span class="case_name-small">#{{ $shop->belongsToGenre->genres }}</span></p>
                     <div class="shop_list-footer">
                         <p class="shop_list-button"><a href="/detail/{{ $shop->id }}" class="shop_list-button-text">詳しくみる</a></p>
                         <div class="shop_favorite">

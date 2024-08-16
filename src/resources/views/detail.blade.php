@@ -22,7 +22,7 @@
                     </div>
                     <p class="case__name">
                         <span class="case__name-small">#{{ $shops->belongsToCountry->countries }}</span>
-                        <span class="case__name-small">#{{ $shops->belongsToGenres->genres }}</span>
+                        <span class="case__name-small">#{{ $shops->belongsToGenre->genres }}</span>
                     </p>
                     <p class="detail__text">{{ $shops->description }}</p>
                 </section>
