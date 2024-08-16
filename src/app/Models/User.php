@@ -64,12 +64,12 @@ class User extends Authenticatable
         return $this->hasMany(Reservations::class);
     }
 
-    public function favorite()
+    public function favorites()
     {
         return $this->hasMany(Favorites::class);
     }
 
-    public function review()
+    public function reviews()
     {
         return $this->hasMany(Reviews::class);
     }

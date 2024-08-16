@@ -37,7 +37,7 @@ class Reservations extends Model
         return $this->belongsTo(Shops::class, 'shop_id');
     }
 
-    public function review()
+    public function reviews()
     {
         return $this->hasMany(Reviews::class);
     }

@@ -29,17 +29,17 @@ class Shops extends Model
     }
 
     /*リレーションシップ - Genresモデル */
-    public function belongsToGenres()
+    public function belongsToGenre()
     {
         return $this->belongsTo(Genres::class, 'genre_id');
     }
 
-    public function favorite()
+    public function favorites()
     {
         return $this->hasMany(Favorites::class);
     }
 
-    public function reservation()
+    public function reservations()
     {
         return $this->hasMany(Reservations::class);
     }
