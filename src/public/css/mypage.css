@@ -254,7 +254,7 @@
     width: 50px;
     height: 50px;
     margin: 0 5px 0 0;
-    background: url('/images/star.png');
+    background: url('/images/svg/star_icon.svg');
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -265,7 +265,7 @@
     width: 25px;
     height: 25px;
     margin: 0 5px 0 0;
-    background: url('/images/star.png');
+    background: url('/images/svg/star_icon.svg');
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -273,7 +273,7 @@
 
 .modal__star-label.fill,
 .star-list-label.fill-list {
-    background: url('/images/star2.png');
+    background: url('/images/svg/star2_icon.svg');
     background-size: contain;
     background-repeat: no-repeat;
 }

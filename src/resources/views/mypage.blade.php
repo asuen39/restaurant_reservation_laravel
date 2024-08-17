@@ -23,7 +23,7 @@
                 <!-- カウントを表示 -->
                 <div class="mypage__reservation-head">
                     <p class="mypage__reservation-head-left">
-                        <img src="{{ asset('images/clock_icon.png') }}" class="clock__icon" alt="clock">
+                        <img src="{{ asset('images/svg/clock_icon.svg') }}" class="clock__icon" alt="Logo">
                         <span class="mypage__reservation-head-left-text">予約{{ $count }}</span>
                     </p>
                     <div class="mypage__reservation-head-right">
@@ -31,7 +31,7 @@
                             @csrf
                             @method('DELETE')
                             <button type="submit">
-                                <img src="{{ asset('images/close_icon.png') }}" class="close__icon" alt="close">
+                                <img src="{{ asset('images/svg/close_icon.svg') }}" class="close__icon" alt="close">
                             </button>
                         </form>
                     </div>

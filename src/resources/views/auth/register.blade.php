@@ -16,7 +16,7 @@
             <div class="form__group">
                 <div class="form__group-content">
                     <div class="form__input--text">
-                        <img src="{{ asset('images/user_icon.png') }}" class="form__input-img" alt="ユーザー">
+                        <img src="{{ asset('images/svg/user_icon.svg') }}" class="form__input-img" alt="ユーザー">
                         <input id="name" type="text" name="name" placeholder="名前" value="{{ old('name') }}">
                     </div>
                 </div>
@@ -27,7 +27,7 @@
             <div class="form__group">
                 <div class="form__group-content">
                     <div class="form__input--text">
-                        <img src="{{ asset('images/mail_icon.png') }}" class="form__input-img" alt="メール">
+                        <img src="{{ asset('images/svg/mail_icon.svg') }}" class="form__input-img" alt="メール">
                         <input id="email" type="email" name="email" placeholder="Email" value="{{ old('email') }}">
                     </div>
                 </div>
@@ -38,7 +38,7 @@
             <div class="form__group">
                 <div class="form__group-content">
                     <div class="form__input--text">
-                        <img src="{{ asset('images/key_icon.png') }}" class="form__input-img" alt="パスワード">
+                        <img src="{{ asset('images/svg/key_icon.svg') }}" class="form__input-img" alt="パスワード">
                         <input id="password" type="password" name="password" placeholder="パスワード">
                     </div>
                 </div>
