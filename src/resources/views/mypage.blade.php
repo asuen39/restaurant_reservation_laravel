@@ -11,9 +11,7 @@
     <section class="mypage__section">
         <div class="section__block-left sp_margin0"></div>
         <div class="section__block-right">
-            <div class="mypage__name">
-                <h2>{{ Auth::user()->name }}さん</h2>
-            </div>
+            <h2 class="mb-5">{{ Auth::user()->name }}さん</h2>
         </div>
     </section>
     <section class="mypage__section">

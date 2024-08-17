@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="container">
+<section class="container">
     @if (session('flash_alert'))
     <div class="alert alert-danger">{{ session('flash_alert') }}</div>
     @elseif(session('status'))
@@ -15,24 +15,24 @@
     @endif
     <div class="pt-5 pb-5">
         <div class="col-lg-7 col-md-9 mx-auto card">
-            <div class="card-header">Stripe決済</div>
+            <p class="card-header">Stripe決済</p>
             <div class="card-body">
                 <form id="card-form" action="{{ route('processPayment') }}" method="POST">
                     @csrf
-                    <div>
-                        <label for="card_number">カード番号</label>
-                        <div id="card-number" class="form-control"></div>
-                    </div>
-
-                    <div>
-                        <label for="card_expiry">有効期限</label>
-                        <div id="card-expiry" class="form-control"></div>
-                    </div>
-
-                    <div>
-                        <label for="card-cvc">セキュリティコード</label>
-                        <div id="card-cvc" class="form-control"></div>
-                    </div>
+                    <ul>
+                        <li>
+                            <label for="card_number">カード番号</label>
+                            <div id="card-number" class="form-control"></div>
+                        </li>
+                        <li class="mt-3">
+                            <label for="card_expiry">有効期限</label>
+                            <div id="card-expiry" class="form-control"></div>
+                        </li>
+                        <li class="mt-3">
+                            <label for="card-cvc">セキュリティコード</label>
+                            <div id="card-cvc" class="form-control"></div>
+                        </li>
+                    </ul>
 
                     <div id="card-errors" class="text-danger"></div>
 
@@ -44,7 +44,7 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 <script type="text/javascript" src="https://js.stripe.com/v3/"></script>
 <script>
     /* 基本設定*/

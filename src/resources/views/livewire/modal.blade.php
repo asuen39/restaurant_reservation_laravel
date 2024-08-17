@@ -4,7 +4,7 @@
     </button>
 
     @if($showModal && isset($reservation))
-    <div class="mypage__modal-edit">
+    <section class="mypage__modal-edit">
         <div class="modal-body">
             <div class="modal-content">
                 <form action="{{ route('updateProfile') }}" method="post">
@@ -38,7 +38,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    </section>
     @endif
 </div>
 

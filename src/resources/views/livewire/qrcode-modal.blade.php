@@ -4,7 +4,7 @@
     </button>
 
     @if($qrcodeModalflag)
-    <div class="mypage__modal-edit">
+    <section class="mypage__modal-edit">
         <div class="qrcode__modal-body">
             <div class="modal-content">
                 <div>
@@ -22,6 +22,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     @endif
 </div>

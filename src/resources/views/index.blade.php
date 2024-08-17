@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-<div class="search__content">
+<section class="search__content">
     <div class="search__inner">
         <form id="searchForm" action="{{ route('search') }}" class="search__form" method="get">
             <div class="search_select-area">
@@ -28,9 +28,9 @@
             <input class="search__item-input" type="text" name="keyword" value="" placeholder="Search...">
         </form>
     </div>
-</div>
-<div class="shop__content">
-    <section class="shop__inner">
+</section>
+<section class="shop__content">
+    <div class="shop__inner">
         <ul class="shop_list-area">
             @if(isset($searchResults))
             @foreach($searchResults as $shop)
@@ -90,7 +90,7 @@
             @endforeach
             @endif
         </ul>
-    </section>
+    </div>
     @if(isset($shops))
     <div class="d-flex justify-content-center">
         <div class="pagination-links">
@@ -105,5 +105,5 @@
         </div>
     </div>
     @endif
-</div>
+</section>
 @endsection

@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-<div class="register__content">
+<section class="register__content">
     <div class="register__form-area">
         <div class="register__header">
             <p class="register__header-title">Login</p>
@@ -43,5 +43,5 @@
             </div>
         </form>
     </div>
-</div>
+</section>
 @endsection

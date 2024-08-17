@@ -7,19 +7,14 @@
 }
 
 .detail__inner {
-    max-width: 1240px;
-    height: 100%;
-    margin: 0 auto;
-}
-
-.detail__list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     height: 100%;
+    max-width: 1240px;
 }
 
-.detail__list-box {
+.detail__list {
     width: 48%;
 }
 
@@ -206,7 +201,7 @@
         max-height: none;
     }
 
-    .detail__list-box {
+    .detail__list {
         width: 100%;
     }
 

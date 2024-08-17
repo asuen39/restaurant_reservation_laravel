@@ -2,11 +2,6 @@
     width: auto;
 }
 
-.mypage__name {
-    height: auto;
-    margin-bottom: 50px;
-}
-
 .mypage__section {
     display: flex;
     flex-wrap: wrap;

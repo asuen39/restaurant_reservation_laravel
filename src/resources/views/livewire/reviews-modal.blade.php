@@ -3,7 +3,7 @@
         レビュー
     </button>
     @if($isOpen)
-    <div class="mypage__modal-edit">
+    <section class="mypage__modal-edit">
         <div class="reviews__modal-body">
             <div class="modal-content">
                 <h4 class="modal__sp-h4">レビュー一覧</h4>
@@ -59,7 +59,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    @endif
-    <script src="{{ asset('js/reviews.js') }}"></script>
+</div>
+@endif
+<script src="{{ asset('js/reviews.js') }}"></script>
 </div>
