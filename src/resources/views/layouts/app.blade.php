@@ -13,7 +13,7 @@
     @livewireStyles
 </head>
 
-<body>
+<body class="body__layout">
     <div class="container-lg">
         <header class="header">
             <div class="header__inner">
@@ -52,7 +52,7 @@
                 </nav>
             </div>
         </header>
-        <main>
+        <main class="main__layout">
             @yield('content')
         </main>
     </div>

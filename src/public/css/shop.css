@@ -64,6 +64,7 @@
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
+    padding: 0;
 }
 
 .shop_list {
@@ -142,6 +143,7 @@
     border-radius: 10px;
     color: #ffffff;
     font-size: 14px;
+    text-decoration: none;
 }
 
 /* 1200px以下 */
