@@ -70,10 +70,11 @@
 ・RDSでのドメイン登録
 
 ## テーブル設計
-![table_image](https://github.com/asuen39/restaurant_reservation_laravel/assets/68514566/1330d09c-23e2-4591-861a-a83c0d9a6666)
+![table_image2](https://github.com/user-attachments/assets/f9965985-1236-4620-acda-d2d3dd3a3ebf)
 
 ## ER図
-![er](https://github.com/asuen39/restaurant_reservation_laravel/assets/68514566/766343c0-b55f-4fed-88ad-58d60a3d8b6a)
+![er](https://github.com/user-attachments/assets/e7739f98-2f9d-413a-a133-79efeb2e36b9)
+
 
 ## 環境構築
 - git cloneをする。
