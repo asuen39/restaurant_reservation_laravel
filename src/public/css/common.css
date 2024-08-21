@@ -36,6 +36,10 @@
     position: relative;
 }
 
+.body__layout.active {
+    overflow: hidden;
+}
+
 .header__inner.active {
     background-color: #ffffff;
 }
