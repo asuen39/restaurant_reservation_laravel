@@ -60,8 +60,8 @@
 - Laravel-Livewire
 - Mysql 8.0
 - bootstrap3
+- jquery
 - jquery.datetimepicker
-- Jquery
 - Font Awesome
 - Stripe
 - AWS EC2、RDS、S3
@@ -108,4 +108,4 @@
 ・https://docs.google.com/spreadsheets/d/1LUGSVZr9rSvMc_CU3vXED35HsJlNlWWZ82bVnFKt9jA/edit?pli=1&gid=1599820009#gid=1599820009<br>
 ・ローカルで確認時はスプレットシート記載の通り、QRコードの生成URLを変更する必要があります。<br>
 ・変更後はPCブラウザでアクセス可能です。スマートフォンでの確認は設定したURLにアクセス出来るよう調整する必要があります。<br>
-・awsではデータベースの確認はできませんが読み取りは容易にできます。フラグが変化するスクリーンショットをスプレットシートに載せています。<br>
+・awsではデータベースの確認はできませんが読み取りは容易にできます。フラグが変化するスクリーンショットをスプレットシートに載せています。
