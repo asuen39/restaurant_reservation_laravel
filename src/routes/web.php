@@ -49,7 +49,9 @@ Route::middleware('auth')->group(function () {  //ログインしているユー
 
 //店舗詳細ページ
 //IDありで/detail/{id}にアクセスした場合のルート
-Route::get('/detail/{id}', [ShopDetailController::class, 'detail'])->name('detail');
+Route::middleware('auth')->group(function () {  //ログインしているユーザーのみアクセス可能
+    Route::get('/detail/{id}', [ShopDetailController::class, 'detail'])->name('detail');
+});
 //IDなしで/detailにアクセスした場合のルート
 Route::get('/detail', [ShopDetailController::class, 'noDetail'])->name('noDetail');
 Route::post('/detail', [ShopDetailController::class, 'showPaymentForm'])->name('showPaymentForm');
